@@ -1,0 +1,147 @@
+@media (max-width: 852px) {
+    .container {
+        flex-direction: column;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    .logo {
+        display: flex;
+    }
+    footer {
+        margin: auto;
+    }
+}
+
+body, input, select, textarea, button {
+    font-family: 'Muli', sans-serif;
+    color: #AC80A0;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+fieldset {
+    margin: .5em;
+    background-color: #fdfdfd;
+    border-color: #9BA0BC;
+    border-width: .25em;
+    border-style: solid;
+    border-radius: 1em;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body {
+  height: 100%;
+  font-weight: 800;
+}
+
+body {
+  font-family: Arial;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #A9DDD6;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #7A8B99;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #91ADC2;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #9BA0BC;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #AC80A0;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+button {
+    size:250%;
+}
+
+.submit {
+    background-color: #A9DDD6;
+    border: none;
+    border-radius: 1em;
+    color: white;
+    margin: 20px 0px 0px 0px;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.submit:active {
+    background-color: #7A8B99;
+    font-size: 20px;
+}
+
+.submit:visited {
+    background-color: lightslategray;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 10px 0px;
+}
+
+textarea {
+    font-size: 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#journalDate {
+    height: 30px;
+    font-size: 14pt;
+}
+
+#conceptsCovered {
+    height: 30px;
+    font-size: 14pt;
+}
+
+#mood {
+    background-color: white;
+    color: #66101F;
+    font-size: inherit;
+}

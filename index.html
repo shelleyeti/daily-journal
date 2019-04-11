@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/journal.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <title>Daily Journal</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo">
+        <svg viewBox="0 0 960 200">
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="80%">Daily Journal</text>
+            </symbol>
+        
+            <g class = "g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+        </svg>
+        </div>
+    <form>
+        <div class="container">
+        <fieldset>
+            <label for="journalDate">Date of entry</label>
+            <input type="date" name="journalDate" id="journalDate">
+        </fieldset>
+        <fieldset>
+            <label for="conceptsCovered">Concepts Covered:</label>
+            <input id="conceptsCovered" name="" type="text"/>
+        </fieldset>
+        <fieldset>
+            <label for="journalEntry">Journal Entry:</label>
+            <textarea name="comment" rows="7" cols="50"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="mood">Mood for the day:</label>
+            <div class="customSelect">
+                <select style="width:200px;" id="mood">
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="ok">OK</option>
+                    <option value="wild">Wild</option>
+                </select>
+            </div>
+        </fieldset>
+        </div>
+        <div class="container">
+            <input type="submit" value="Record Entry" class="submit">
+        </div>
+    </form>
+    <div class="container">
+        <footer id="footer">
+            <p>You're doing a great job baby.</p>
+        </footer>
+    </div>
+    </div>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

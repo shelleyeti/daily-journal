@@ -1,20 +1,52 @@
 // Represents a Journal Entry
-const objectsJournalEntry = {
+const journalEntries = [
+    {
     date: "March 29, 2019",
-    conceptsCovered: "How to Make Frends",
-    journal: "Making frends is fun.",
+    concept: "How to Make Frends",
+    entry: "Making frends is fun.",
     mood: "happy"
-}
-
-const objectsJournalEntry2 = {
+    },
+    {
     date: "April 3, 2019",
-    conceptsCovered: "Recognizing a Computer",
-    journal: "Computers come in all shapes and sizes.",
+    concept: "Recognizing a Computer",
+    entry: "Computers come in all shapes and sizes.",
     mood: "wild"
+    }
+]
+
+
+for(key in journalEntries) {
+    console.log(key + ": " + journalEntries[key]) 
 }
 
-for(key in objectsJournalEntry2) {
-    console.log(key + ": " + objectsJournalEntry2[key]) 
+const makeJournalEntryComponent = (journalEntry, entryCounter) => {
+    return `
+    <div class="journal-entry">
+            <h1>Journal Entry ${entryCounter}</h1>
+            <section>${journalEntry.date}</section>
+            <aside>
+                Concepts Covered: ${journalEntry.concept}
+                <br>
+                Entry: ${journalEntry.entry}
+                <br>
+                Mood: ${journalEntry.mood}
+            </aside>
+        </div>
+    `
 }
 
 
+// for (i = 0; i < journalEntries.length; i++) {
+//     printEntry.innerHTML += makeJournalEntryComponent(journalEntries[i])
+// }
+
+const renderJournalEntries = (entries) => {
+    const printEntry = document.querySelector("#print-entry")
+    let entryCounter = 1;
+    for (i = 0; i < entries.length; i++) {
+        printEntry.innerHTML += makeJournalEntryComponent(journalEntries[i], entryCounter)
+        entryCounter++;
+}
+}
+
+renderJournalEntries(journalEntries)

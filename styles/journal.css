@@ -145,3 +145,19 @@ textarea {
     color: #66101F;
     font-size: inherit;
 }
+
+footer {
+    text-align: center;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+}
+
+.journal-entry {
+    text-align: left;
+    border-bottom: 5px dashed;
+    border-color: #9BA0BC;
+    margin-bottom:50px;
+    padding-bottom: 15px;
+}

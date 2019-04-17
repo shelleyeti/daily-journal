@@ -150,8 +150,10 @@ footer {
     text-align: center;
     left:0px;
     bottom:0px;
-    height:30px;
+    height:40px;
     width:100%;
+    background-color: #f0f0f0;
+    position: fixed;
 }
 
 .journal-entry {
@@ -160,4 +162,29 @@ footer {
     border-color: #9BA0BC;
     margin-bottom:50px;
     padding-bottom: 15px;
+}
+
+#returnTop {
+    background-color: #A9DDD6;
+    border: none;
+    border-radius: 1em;
+    margin: 20px 0px 0px 0px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#returnTop:active {
+    background-color: #7A8B99;
+}
+
+#returnTop:visited {
+    background-color: lightslategray;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
 }

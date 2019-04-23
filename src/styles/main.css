@@ -13,12 +13,8 @@
 }
 
 body, input, select, textarea, button {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #AC80A0;
-}
-
-body {
-    background-color: #f0f0f0;
 }
 
 .container {
@@ -35,8 +31,6 @@ fieldset {
     border-radius: 1em;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
 html, body {
   height: 100%;
   font-weight: 800;
@@ -44,52 +38,6 @@ html, body {
 
 body {
   font-family: Arial;
-}
-
-svg {
-    display: block;
-    font: 10.5em 'Montserrat';
-    width: 960px;
-    height: 200px;
-    margin: 0 auto;
-}
-
-.text-copy {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 6% 29%;
-    stroke-width: 5px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 5.5s infinite linear;
-}
-
-.text-copy:nth-child(1){
-	stroke: #A9DDD6;
-	animation-delay: -1;
-}
-
-.text-copy:nth-child(2){
-	stroke: #7A8B99;
-	animation-delay: -2s;
-}
-
-.text-copy:nth-child(3){
-	stroke: #91ADC2;
-	animation-delay: -3s;
-}
-
-.text-copy:nth-child(4){
-	stroke: #9BA0BC;
-	animation-delay: -4s;
-}
-
-.text-copy:nth-child(5){
-	stroke: #AC80A0;
-	animation-delay: -5s;
-}
-
-@keyframes stroke-offset{
-	100% {stroke-dashoffset: -35%;}
 }
 
 button {
@@ -144,4 +92,22 @@ textarea {
     background-color: white;
     color: #66101F;
     font-size: inherit;
+}
+
+footer {
+    text-align: center;
+    left:0px;
+    bottom:0px;
+    height:40px;
+    width:100%;
+    background-color: #f0f0f0;
+    position: fixed;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
 }

@@ -1,4 +1,4 @@
-Daily Journal
+#Daily Journal
 
 
 Linking css stylesheets. 

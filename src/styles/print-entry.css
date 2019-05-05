@@ -6,13 +6,10 @@
     padding-bottom: 15px;
 }
 
-#returnTop {
-    background-color: #A9DDD6;
-    border: none;
-    border-radius: 1em;
-    margin: 20px 0px 0px 0px;
+#returnTop, .deleteEntry {
     padding: 10px 20px;
     text-decoration: none;
+    font-size: 15px;
 }
 
 #returnTop:active {

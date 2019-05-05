@@ -49,9 +49,13 @@ const makeEntry = (entryObj) => {
         });
 }
 
-// const deleteEntry = (entryDate) => {
-//   fetch(`${apiBaseURL}/journalEntries/${entryDate}`,
-//     {
-//         method: "DELETE"
-//     })
-// };
+const deleteEntry = (entryId) => {
+  fetch(`${apiBaseURL}/journalEntries/${entryId}`,
+    {
+        method: "DELETE"
+    })
+    //reloads all entries back to the dom
+    .then( () => {
+        getAllEntries();
+    });
+};

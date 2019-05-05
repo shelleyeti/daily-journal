@@ -1,4 +1,5 @@
 //returns entry to dom
+//data-id is a part of dataset
 makeJournalEntryComponent = (journalEntry, entryCounter) => {
     return `
     <div class="journal-entry">
@@ -12,6 +13,7 @@ makeJournalEntryComponent = (journalEntry, entryCounter) => {
             Mood: ${journalEntry.mood}
         </aside>
         <button type="button" id="returnTop"> <a href="#">Return to Top </a></button>
+        <button type="button" data-id="${journalEntry.id}" class="deleteEntry">Delete Entry</button>
     </div>
     `
 };
@@ -25,8 +27,16 @@ renderJournalEntries = (entries) => {
     let entryCounter = 1;
     //Loops through each object
     for (i = 0; i < entries.length; i++) {
-        printEntry.innerHTML += makeJournalEntryComponent(entries[i], entryCounter)
+        printEntry.innerHTML += makeJournalEntryComponent(entries[i], entryCounter);
         entryCounter++;
     }
+    //selects delete buttons, loops through, and adds event listener to each
+    document.querySelectorAll(".deleteEntry").forEach(deleteButton => {
+        deleteButton.addEventListener("click", (event) => {
+            //target the dataset.id from the button
+            deleteEntry(event.target.dataset.id);
+            
+    });
+    })
 };
 

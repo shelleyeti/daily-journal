@@ -14,7 +14,7 @@ makeJournalEntryComponent = (journalEntry, entryCounter) => {
         <button type="button" id="returnTop"> <a href="#">Return to Top </a></button>
     </div>
     `
-}
+};
 
 //selects element to print to html
 renderJournalEntries = (entries) => {
@@ -27,15 +27,4 @@ renderJournalEntries = (entries) => {
         printEntry.innerHTML += makeJournalEntryComponent(entries[i], entryCounter)
         entryCounter++;
     }
-}
-
-//gets the api 
-function getData() {
-    fetch("http://localhost:8088/journalEntries")
-        .then(entries => entries.json())
-        .then(parsedEntries => {
-            renderJournalEntries(parsedEntries)
-    })
-}
-
-getData()
+};

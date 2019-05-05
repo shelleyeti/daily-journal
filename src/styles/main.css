@@ -42,9 +42,6 @@ body {
 
 button {
     size:250%;
-}
-
-.submit {
     background-color: #A9DDD6;
     border: none;
     border-radius: 1em;
@@ -55,12 +52,11 @@ button {
     font-size: 20px;
 }
 
-.submit:active {
+button:active {
     background-color: #7A8B99;
-    font-size: 20px;
 }
 
-.submit:visited {
+button:visited {
     background-color: lightslategray;
 }
 

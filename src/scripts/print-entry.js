@@ -14,6 +14,7 @@ makeJournalEntryComponent = (journalEntry, entryCounter) => {
         </aside>
         <button type="button" id="returnTop"> <a href="#">Return to Top </a></button>
         <button type="button" data-id="${journalEntry.id}" class="deleteEntry">Delete Entry</button>
+        <button type="button"class="editEntry"><a href="#" data-id="${journalEntry.id}">Edit Entry</a></button>
     </div>
     `
 };
@@ -34,7 +35,14 @@ renderJournalEntries = (entries) => {
     document.querySelectorAll(".deleteEntry").forEach(deleteButton => {
         deleteButton.addEventListener("click", (event) => {
             //target the dataset.id from the button
-            deleteEntry(event.target.dataset.id);
+            deleteEntry(event.target.dataset.id);   
+    });
+    });
+    //selects edit buttons, loops through, and adds event listener to each
+    document.querySelectorAll(".editEntry").forEach(editButton => {
+        editButton.addEventListener("click", (event) => {
+            //target the dataset.id from the button
+            getEntry(event.target.dataset.id);
             
     });
     })

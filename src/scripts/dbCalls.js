@@ -18,20 +18,36 @@ const getAllEntries = (mood) => {
     });
 };
 
-// const updateEntry = (entryDate, entryObj) => {
-//     fetch (`${apiBaseURL}/journalEntries/${entryDate}`,
-//         {
-//             method:"PATCH",
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body:JSON.stringify(entryObj)
-//         })
-//      .then(response => response.json())
-//      .then(parsedResult => {
-//         console.log("updated entry", parsedResult);
-//         })
-// };
+const getEntry = (entryId) => {
+    return fetch(`${apiBaseURL}/journalEntries/${entryId} `)
+      .then(response => response.json())
+      .then(parsedEntry => {
+        grabNewDate.value = parsedEntry.date;
+        grabNewConcept.value = parsedEntry.concept;
+        grabNewEntry.value = parsedEntry.entry;
+        grabNewMood.value = parsedEntry.mood;
+        //changes buttonMode to update for if statement
+        buttonMode = "update";
+        //updateEntryId allows global scope
+        updateEntryId = entryId;
+      });
+  };
+
+const updateEntry = (entryId, entryObj) => {
+    fetch (`${apiBaseURL}/journalEntries/${entryId}`,
+        {
+            method:"PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify(entryObj)
+        })
+     .then(response => response.json())
+     .then(parsedResult => {
+        console.log("updated entry", parsedResult);
+        getAllEntries();
+        })
+};
 
 const makeEntry = (entryObj) => {
     fetch(`${apiBaseURL}/journalEntries/`,

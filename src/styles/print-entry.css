@@ -6,7 +6,7 @@
     padding-bottom: 15px;
 }
 
-#returnTop, .deleteEntry {
+#returnTop, .deleteEntry, .editEntry {
     padding: 10px 20px;
     text-decoration: none;
     font-size: 15px;

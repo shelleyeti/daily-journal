@@ -1,8 +1,21 @@
 const apiBaseURL = "http://localhost:8088";
 
-const getAllEntries = () => {
+//IF mood is a argument, then will filter by mood)
+const getAllEntries = (mood) => {
   return fetch(`${apiBaseURL}/journalEntries `)
-    .then(response => response.json());
+    .then(response => response.json())
+    .then(parsedEntries => {
+        if(mood){
+            var filteredEntries = parsedEntries.filter(entry =>{
+                if(entry.mood === mood)
+                    return entry;
+            });
+
+            renderJournalEntries(filteredEntries);
+        }else{
+            renderJournalEntries(parsedEntries)
+        }
+    });
 };
 
 // const updateEntry = (entryDate, entryObj) => {
@@ -32,6 +45,7 @@ const makeEntry = (entryObj) => {
     .then(response => response.json())
     .then(parsedResult => {
         console.log("new entry", parsedResult);
+        getAllEntries();
         });
 }
 

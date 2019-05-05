@@ -111,3 +111,7 @@ a:-webkit-any-link {
     color: white;
     font-size: 15px;
 }
+
+.radioButton > label{
+    display: inline-flex;
+}

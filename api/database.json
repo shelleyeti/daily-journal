@@ -1,16 +1,32 @@
 {
-"journalEntries": [
+  "journalEntries": [
     {
-    "date": "March 29, 2019",
-    "concept": "How to Make Frends",
-    "entry": "Making frends is fun.",
-    "mood": "happy"
+      "date": "2019-03-29",
+      "concept": "How to Make Frends",
+      "entry": "Making frends is fun.",
+      "mood": "happy",
+      "id": 1
     },
     {
-    "date": "April 3, 2019",
-    "concept": "Recognizing a Computer",
-    "entry": "Computers come in all shapes and sizes.",
-    "mood": "wild"
+      "date": "2019-04-03",
+      "concept": "Recognizing a Computer",
+      "entry": "Computers come in all shapes and sizes.",
+      "mood": "wild",
+      "id": 2
+    },
+    {
+      "date": "2019-03-04",
+      "concept": "Indpendence",
+      "entry": "Today I had to reinstall everything and make it all work just like it did before I screwed everything up.",
+      "mood": "sad",
+      "id": 3
+    },
+    {
+      "date": "2019-05-05",
+      "concept": "Daily Journal 6",
+      "entry": "I am adding an event listener to the submit button and making a fetch call to my database so I can post new entries.",
+      "mood": "ok",
+      "id": 4
     }
-]
+  ]
 }

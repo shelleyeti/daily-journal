@@ -27,7 +27,7 @@
         </fieldset>
         <fieldset>
             <label for="journalEntry">Journal Entry:</label>
-            <textarea name="comment" rows="7" cols="50"></textarea>
+            <textarea id="journalEntryText" name="comment" rows="7" cols="50"></textarea>
         </fieldset>
         <fieldset>
             <label for="mood">Mood for the day:</label>
@@ -42,7 +42,7 @@
         </fieldset>
         </div>
         <div class="container">
-            <input type="submit" value="Record Entry" class="submit">
+            <button class="submit">Record Entry</button>
         </div>
     </form>
     <div id="print-entry">
@@ -53,6 +53,7 @@
             <p>You're doing a great job baby.</p>
         </footer>
     </div>
+    <script src="scripts/dbCalls.js"></script>
     <script src="scripts/daily-logo.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/print-entry.js"></script>

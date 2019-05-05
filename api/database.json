@@ -27,6 +27,13 @@
       "entry": "I am adding an event listener to the submit button and making a fetch call to my database so I can post new entries.",
       "mood": "ok",
       "id": 4
+    },
+    {
+      "date": "2019-05-05",
+      "concept": "Printing entries to the Dom",
+      "entry": "Making all entries print to the DOM on page load and on click",
+      "mood": "happy",
+      "id": 5
     }
   ]
 }

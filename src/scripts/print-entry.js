@@ -20,6 +20,7 @@ makeJournalEntryComponent = (journalEntry, entryCounter) => {
 renderJournalEntries = (entries) => {
     //selects html element
     const printEntry = document.querySelector("#print-entry")
+    printEntry.innerHTML = "";
     //sets up counter
     let entryCounter = 1;
     //Loops through each object
@@ -28,3 +29,4 @@ renderJournalEntries = (entries) => {
         entryCounter++;
     }
 };
+

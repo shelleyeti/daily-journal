@@ -17,6 +17,9 @@ const radioButton = document.querySelectorAll("[type='radio']");
 //select submit button on dom and add event lisiner
 const submitNewEntry = document.querySelector(".submit");
 
+//selects search input field
+const searchInput = document.querySelector("#searchInput")
+
 //loop through each radio button
 radioButton.forEach(radio => {
     radio.addEventListener("click", event => {
@@ -28,3 +31,11 @@ radioButton.forEach(radio => {
 filterMood = (mood) => {
     getAllEntries(mood);
 };
+
+//add event listener to searchInput
+searchInput.addEventListener("keypress", (event) => {
+    if(event.keyCode == 13) {
+        //call getAllEntries, null = no mood
+        getAllEntries(null, event.target.value);
+    }
+})

@@ -45,17 +45,23 @@
             <button type="button" class="submit">Record Entry</button>
         </div>
     </form>
-    <fieldset class="radioButton">
-        <label for="sortMoodRadio">Sort Entry by Mood:</label><br>
-        <input type="radio" name="mood" id="happy" value="happy">
-        <label for="happy">Happy</label><br>
-        <input type="radio" name="mood" id="sad" value="sad">
-        <label for="sad">Sad</label><br>
-        <input type="radio" name="mood" id="ok" value="ok">
-        <label for="ok">OK</label><br>
-        <input type="radio" name="mood" id="wild" value="wild">
-        <label for="wild">Wild</label><br>
-    </fieldset>
+    <div id="searchOptions">
+        <fieldset class="radioButton">
+            <label for="sortMoodRadio">Sort Entry by Mood:</label><br>
+            <input type="radio" name="mood" id="happy" value="happy">
+            <label for="happy">Happy</label><br>
+            <input type="radio" name="mood" id="sad" value="sad">
+            <label for="sad">Sad</label><br>
+            <input type="radio" name="mood" id="ok" value="ok">
+            <label for="ok">OK</label><br>
+            <input type="radio" name="mood" id="wild" value="wild">
+            <label for="wild">Wild</label><br>
+        </fieldset>
+        <fieldset id="searchInput">
+            <label for="searchEntries">Search Entries:</label>
+            <input required id="searchEntries" name="" type="text"/>
+        </fieldset>
+    </div>
     <div id="print-entry">
 
     </div>
@@ -65,9 +71,9 @@
         </footer>
     </div>
     <script src="scripts/dbCalls.js"></script>
-    <script src="scripts/dbFunction.js"></script>
     <script src="scripts/daily-logo.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/dbFunction.js"></script>
     <script src="scripts/print-entry.js"></script>
 </body>
 </html>

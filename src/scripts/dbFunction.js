@@ -9,10 +9,12 @@ submitNewEntry.addEventListener("click", () => {
     //validation for info to be complete
     if (newEntry.date !== "" && newEntry.concept !== "" && newEntry.entry !== "" && newEntry.mood !== "") {
         if(buttonMode === "create")
-            makeEntry(newEntry)
+            makeEntry(newEntry);
         //update's entry
-        else
+        else {
             updateEntry(updateEntryId, newEntry);
+            buttonMode = "create";
+        }
     }else {
         let myAlertMessage = "please adding missing content: "
         if(newEntry.date == ""){myAlertMessage += `add date `}

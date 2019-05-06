@@ -79,7 +79,7 @@ textarea {
     font-size: 14pt;
 }
 
-#conceptsCovered {
+#conceptsCovered, #searchEntries {
     height: 30px;
     font-size: 14pt;
 }
@@ -111,3 +111,27 @@ a:-webkit-any-link {
 .radioButton > label{
     display: inline-flex;
 }
+
+#searchOptions {
+    margin: 0 auto;
+    width: 100%;
+    display: inline-flex;
+}
+
+#searchOptions > fieldset {
+    /* align-content: space-between; */
+    /* display: inline-block; */
+    width: 33%;
+    height: 125px;
+    vertical-align: top;
+    margin: 10px auto;
+    /* padding: 10px; */
+}
+
+/*
+fieldset {
+    width: 33%;
+    height: 125px;
+    vertical-align: top;
+    margin: 10px auto;
+}*/

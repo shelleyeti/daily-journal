@@ -2,8 +2,8 @@
   "journalEntries": [
     {
       "date": "2019-03-29",
-      "concept": "How to Make Frends",
-      "entry": "Making frends is fun.",
+      "concept": "How to Make Friends",
+      "entry": "Making friends is fun.",
       "mood": "happy",
       "id": 1
     },
@@ -31,9 +31,16 @@
     {
       "date": "2019-05-05",
       "concept": "Printing entries to the Dom",
-      "entry": "Making all entries print to the DOM on page load and on click",
+      "entry": "Making all entries print to the DOM on page load and on click.",
       "mood": "happy",
       "id": 5
+    },
+    {
+      "date": "2019-05-05",
+      "concept": "Daily Journal 6",
+      "entry": "I am adding an event listener to the submit button and making a fetch call to my database so I can post new entries.",
+      "mood": "happy",
+      "id": 6
     }
   ]
 }

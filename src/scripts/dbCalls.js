@@ -1,7 +1,7 @@
 const apiBaseURL = "http://localhost:8088";
 
 //IF mood is a argument, then will filter by mood)
-const getAllEntries = (mood) => {
+const getAllEntries = (mood, filterValue) => {
   return fetch(`${apiBaseURL}/journalEntries `)
     .then(response => response.json())
     .then(parsedEntries => {
@@ -10,10 +10,19 @@ const getAllEntries = (mood) => {
                 if(entry.mood === mood)
                     return entry;
             });
-
             renderJournalEntries(filteredEntries);
         }else{
-            renderJournalEntries(parsedEntries)
+            if(filterValue){
+                const filteredEntries = parsedEntries.filter(entry => {
+                    for(const itemValue of Object.values(entry)){
+                        if(itemValue != null && typeof(itemValue) == "string" && itemValue.toLowerCase().includes(filterValue.toLowerCase()))
+                            return entry;
+                    }
+                });
+                renderJournalEntries(filteredEntries);
+            }else{
+                renderJournalEntries(parsedEntries)
+            }
         }
     });
 };
